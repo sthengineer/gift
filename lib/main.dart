@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:gift/network/api_endpoints.dart';
+import 'network/dio_network_service.dart';
 
-void main() {
+void main() async{
+
+  final networkLayerInitialization = DioNetworkModule(
+    /*headers: {
+    "Authorization": "Bearer ${ApiConstants.apiKey}",
+  },*/
+    headers: {
+      "": "",
+    },
+  );
+  // Make a GET request to the `/users` endpoint.
+  final getRequest = GetRequest(networkLayerInitialization, ApiEndPoints.users);
+  final response = await getRequest.execute();
+
+  print("status Code : ${response.statusCode}");
+  print("status Message : ${response.statusMessage}");
+  print("data : ${response.data}");
+
   runApp(const MyApp());
 }
 
