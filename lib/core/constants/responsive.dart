@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 
 class responsive {
   static const double zeroPadding = 0;
@@ -15,4 +16,8 @@ class responsive {
   static const double smallMargin = 8.0;
 
   static const double largeMargin = 32.0;
+
+  static var screenWidth = MediaQueryData.fromView(WidgetsBinding.instance.window).size.width;
+
+  static var screenHeight = MediaQueryData.fromView(WidgetsBinding.instance.window).size.height;
 }

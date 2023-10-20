@@ -27,6 +27,8 @@ class _IntroPageState extends State<IntroPage> {
 
   @override
   Widget build(BuildContext context) {
+    print("screenWidth : ${responsive.screenWidth}");
+    print("screenHeight : ${responsive.screenHeight}");
     return Scaffold(
       body: Column(
         children: [
@@ -36,8 +38,11 @@ class _IntroPageState extends State<IntroPage> {
               top: responsive.zeroMargin,
               right: responsive.zeroMargin,
             ),
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * (2 / 3),
+            width: responsive.screenWidth,
+            height: responsive.screenHeight * (2 / 3),
+            constraints: const BoxConstraints(
+              maxHeight: 402,
+            ),
             child: Image.asset(
               'assets/images/entrance/screenshot.png',
               fit: BoxFit.fill,
