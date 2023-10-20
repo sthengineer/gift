@@ -13,7 +13,7 @@ class _IntroPageState extends State<IntroPage> {
   void initState() {
     // TODO: implement initState
     Future.delayed(
-      const Duration(seconds: 1000),
+      const Duration(seconds: 4),
     ).then((value) {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) {
