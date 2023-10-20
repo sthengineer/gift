@@ -30,7 +30,7 @@ class _IntroPageState extends State<IntroPage> {
       body: Column(
         children: [
           Image.asset(
-            'assets/img/entrance/screenshot.png',
+            'assets/images/entrance/screenshot.png',
             height: MediaQuery.of(context).size.height * (2 / 3),
             fit: BoxFit.fill,
           ),
@@ -44,7 +44,7 @@ class _IntroPageState extends State<IntroPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'assets/img/entrance/candle.png',
+                      'assets/images/entrance/candle.png',
                       width: 18,
                       height: 22,
                     ),
