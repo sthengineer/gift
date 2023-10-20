@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gift/core/constants/palette.dart';
+import 'package:gift/core/constants/responsive.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class _IntroPageState extends State<IntroPage> {
   void initState() {
     // TODO: implement initState
     Future.delayed(
-      const Duration(seconds: 4),
+      const Duration(seconds: 100),
     ).then((value) {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) {
@@ -29,10 +30,18 @@ class _IntroPageState extends State<IntroPage> {
     return Scaffold(
       body: Column(
         children: [
-          Image.asset(
-            'assets/images/entrance/screenshot.png',
+          Container(
+            margin: const EdgeInsets.only(
+              left: responsive.zeroMargin,
+              top: responsive.zeroMargin,
+              right: responsive.zeroMargin,
+            ),
+            width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * (2 / 3),
-            fit: BoxFit.fill,
+            child: Image.asset(
+              'assets/images/entrance/screenshot.png',
+              fit: BoxFit.fill,
+            ),
           ),
           const SizedBox(height: 58),
           Center(
