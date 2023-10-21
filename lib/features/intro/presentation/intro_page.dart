@@ -27,8 +27,6 @@ class _IntroPageState extends State<IntroPage> {
 
   @override
   Widget build(BuildContext context) {
-    print("screenWidth : ${responsive.screenWidth}");
-    print("screenHeight : ${responsive.screenHeight}");
     return Scaffold(
       body: Column(
         children: [
