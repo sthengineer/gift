@@ -12,7 +12,6 @@ class IntroPage extends StatefulWidget {
 class _IntroPageState extends State<IntroPage> {
   @override
   void initState() {
-    // TODO: implement initState
     Future.delayed(
       const Duration(seconds: 100),
     ).then((value) {
