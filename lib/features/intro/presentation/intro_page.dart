@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gift/core/constants/palette.dart';
 import 'package:gift/core/constants/responsive.dart';
+import 'package:gift/features/register/presentation/register_page.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({Key? key}) : super(key: key);
@@ -13,12 +14,12 @@ class _IntroPageState extends State<IntroPage> {
   @override
   void initState() {
     Future.delayed(
-      const Duration(seconds: 100),
+      const Duration(seconds: 4),
     ).then((value) {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) {
         // TODO: add SignUp Page
-        return const Center();
+        return RegisterPage();
       }));
     });
     super.initState();
