@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gift/core/constants/palette.dart';
 import 'package:gift/core/constants/responsive.dart';
+import 'package:gift/features/login/presentation/login_page.dart';
 import 'package:gift/features/register/presentation/register_page.dart';
 
 class IntroPage extends StatefulWidget {
@@ -19,7 +20,7 @@ class _IntroPageState extends State<IntroPage> {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) {
         // TODO: add SignUp Page
-        return RegisterPage();
+        return LoginPage();
       }));
     });
     super.initState();

@@ -23,6 +23,7 @@ class responsive {
 
   static var screenHeight = MediaQueryData.fromView(WidgetsBinding.instance.window).size.height;
 
-
   static const double smallBorderRadius = 4.0;
+
+  static const distanceFromAbove = 70.0;
 }
