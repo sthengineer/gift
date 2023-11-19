@@ -12,11 +12,20 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign Up'),
-        leading: IconButton(
-          icon: const Icon(Icons.navigate_next),
-          onPressed: () {},
-        ),
+        actions: [
+          const Text(
+            'Sign Up',
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: Palette.primaryColor
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.navigate_next),
+          )
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
