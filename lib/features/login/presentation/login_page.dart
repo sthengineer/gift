@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gift/core/constants/responsive.dart';
+import 'package:gift/features/register/presentation/register_page.dart';
 import 'package:gift/features/widgets/email_input_box.dart';
 import 'package:gift/core/constants/palette.dart';
 import 'package:gift/features/widgets/password_input_box.dart';
@@ -16,13 +17,17 @@ class LoginPage extends StatelessWidget {
           const Text(
             'Sign Up',
             style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
-              color: Palette.primaryColor
-            ),
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: Palette.primaryColor),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const RegisterPage()));
+            },
             icon: const Icon(Icons.navigate_next),
           )
         ],
@@ -69,7 +74,22 @@ class LoginPage extends StatelessWidget {
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // TODO: This part should be changed later
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          transitionDuration: const Duration(milliseconds: 500),
+                          pageBuilder: (_, __, child) => const RegisterPage(),
+                          transitionsBuilder:
+                              (_, Animation<double> animation, __, child) =>
+                                  FadeTransition(
+                            opacity: animation,
+                            child: child,
+                          ),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Palette.primaryColor,
                     ),
