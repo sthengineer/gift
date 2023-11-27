@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gift/features/intro/presentation/intro_page.dart';
 import 'package:gift/network/api_endpoints.dart';
 import 'network/dio_network_service.dart';
 
@@ -28,11 +29,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      /*home: const MyHomePage(),*/
+      home: const IntroPage(),
     );
   }
 }
