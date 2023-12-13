@@ -8,6 +8,6 @@ class Palette {
   static const Color pureWhite = Colors.white;// rgb(103, 80, 164)
 
   static const Color signInIconImageColor = Color(0xff49454F);
-  static const Color signInIconBorderColor = Color(0xff000000);// rgb(103, 80, 164)
+  static const Color pureBlack = Color(0xff000000);
 
 }

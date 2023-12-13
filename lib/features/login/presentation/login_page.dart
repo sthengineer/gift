@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gift/core/constants/responsive.dart';
+import 'package:gift/core/presentation/main_wrapper.dart';
+import 'package:gift/features/home/presentation/home_page.dart';
 import 'package:gift/features/register/presentation/register_page.dart';
 import 'package:gift/features/widgets/email_input_box.dart';
 import 'package:gift/core/constants/palette.dart';
@@ -76,11 +78,11 @@ class LoginPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // TODO: This part should be changed later
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         PageRouteBuilder(
                           transitionDuration: const Duration(milliseconds: 500),
-                          pageBuilder: (_, __, child) => const RegisterPage(),
+                          pageBuilder: (_, __, child) => const MainWrapper(),
                           transitionsBuilder:
                               (_, Animation<double> animation, __, child) =>
                                   FadeTransition(
@@ -116,7 +118,7 @@ class LoginPage extends StatelessWidget {
                         RoundedIconButton(
                           imageAddress: 'assets/images/icons/google.png',
                           iconColor: Palette.signInIconImageColor,
-                          borderColor: Palette.signInIconBorderColor,
+                          borderColor: Palette.pureBlack,
                           onPressed: () {},
                           width: 24.0,
                           height: 24.0,
@@ -125,7 +127,7 @@ class LoginPage extends StatelessWidget {
                         RoundedIconButton(
                           imageAddress: 'assets/images/icons/apple.png',
                           iconColor: Palette.signInIconImageColor,
-                          borderColor: Palette.signInIconBorderColor,
+                          borderColor: Palette.pureBlack,
                           onPressed: () {},
                           width: 24.0,
                           height: 24.0,
@@ -134,7 +136,7 @@ class LoginPage extends StatelessWidget {
                         RoundedIconButton(
                           imageAddress: 'assets/images/icons/facebook.png',
                           iconColor: Palette.signInIconImageColor,
-                          borderColor: Palette.signInIconBorderColor,
+                          borderColor: Palette.pureBlack,
                           onPressed: () {},
                           width: 24.0,
                           height: 24.0,
